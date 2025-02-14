@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link href="{% static 'css/profile.css' %}" rel="stylesheet" />
+</head>
+<style>
+ /* Profile Page Styles */
+.profile-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; /* Wider container */
+  margin: 40px auto;
+  text-align: center;
+}
+
+.profile-content {
+  margin-top: 30px;
+}
+
+.profile-picture {
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 300px; /* Larger profile picture */
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #0b5ed7;/* Thicker border */
+  object-fit: cover;
+}
+
+.profile-picture button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #0b5ed7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-picture button:hover {
+  background-color: #0b5ed7;
+}
+
+.profile-details {
+  text-align: left;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.detail {
+  margin-bottom: 25px;
+}
+
+.detail label {
+  font-weight: bold;
+  color: #0b5ed7;
+  font-size: 18px; /* Larger label text */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.detail p {
+  margin: 0;
+  color: #333;
+  font-size: 18px; /* Larger detail text */
+  line-height: 1.6;
+}
+
+.edit-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #0b5ed7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px; /* Larger button text */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0b5ed7;
+}
+  
+</style>
+<body>
+  <div class="profile-container">
+    <h1>My Profile</h1>
+    <div class="profile-content">
+     
+      <!-- User Details -->
+      <div class="profile-details">
+        <div class="detail">
+          <label>Name:</label>
+          <p id="userName">John Doe</p>
+        </div>
+        <div class="detail">
+          <label>Email:</label>
+          <p id="userEmail">john.doe@example.com</p>
+        </div>
+        <div class="detail">
+          <label>Bio:</label>
+          <p id="userBio">Hello! I'm a passionate blogger who loves sharing my thoughts with the world.</p>
+        </div>
+      </div>
+
+      <!-- Edit Button -->
+      <button class="edit-button" onclick="enableEdit()">Edit Profile</button>
+    </div>
+  </div>
+
+  <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
